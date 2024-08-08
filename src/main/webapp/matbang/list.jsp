@@ -14,6 +14,12 @@
     <input type="text" id="loaiVp" name="loaiVp">
     <input type="submit" value="Search">
 </form>
+<form action="matbang" method="get">
+    <input type="hidden" name="action" value="searchByTang">
+    <label for="tang">Search by Tang:</label>
+    <input type="number" id="tang" name="tang">
+    <input type="submit" value="Search">
+</form>
 <table border="1">
     <tr>
         <th>ID</th>
