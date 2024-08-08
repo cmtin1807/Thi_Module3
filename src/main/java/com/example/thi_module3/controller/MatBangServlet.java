@@ -54,13 +54,13 @@ public class MatBangServlet extends HttpServlet {
         int tang = Integer.parseInt(request.getParameter("tang"));
         List<MatBang> listMatBang = matBangRepository.findByTang(tang);
         request.setAttribute("listMatBang", listMatBang);
-        request.getRequestDispatcher("matbang-list.jsp").forward(request, response);
+        request.getRequestDispatcher("matbang/list.jsp").forward(request, response);
     }
     private void searchMatBang(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String loaiVp = request.getParameter("loaiVp");
         List<MatBang> listMatBang = matBangRepository.findByLoaiVp(loaiVp);
         request.setAttribute("listMatBang", listMatBang);
-        request.getRequestDispatcher("matbang-list.jsp").forward(request, response);
+        request.getRequestDispatcher("matbang/list.jsp").forward(request, response);
     }
     private void listMatBang(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<MatBang> listMatBang = matBangRepository.findAll();
